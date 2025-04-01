@@ -11,7 +11,7 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(24)
 	}
 }
 
@@ -32,6 +32,16 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	implementation("io.jsonwebtoen:jjwt:0.11.5") // JWT Token
+
+	// SDK AWS DynamoDB
+	implementation("io.github.boostchicken:spring-data-dynamodb:5.2.5")
+
+	// AWS SDK Core and DynamoDB
+	implementation("software.amazon.awssdk:dynamodb:2.20.61")
+	implementation("software.amazon.awssdk:auth:2.20.129")
+
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
